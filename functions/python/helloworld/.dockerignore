@@ -1,0 +1,6 @@
+.vscode
+Dockerfile
+*.pyc
+*.pyo
+*.pyd
+__pycache__
