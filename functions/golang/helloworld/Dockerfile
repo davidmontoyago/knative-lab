@@ -1,6 +1,6 @@
 FROM golang:1.13.6-alpine3.11 as build
 
-ENV PORT=9000
+ENV API_PORT=9000
 
 WORKDIR /app
 

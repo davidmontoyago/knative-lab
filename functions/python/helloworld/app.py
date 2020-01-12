@@ -18,4 +18,5 @@ setup_app(app)
 
 @app.route("/py/hello")
 def hello():
+    log.info("handling request at /py/hello")
     return "Hello from Python app!"

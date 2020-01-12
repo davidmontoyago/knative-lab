@@ -15,10 +15,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 func main() {
 	http.HandleFunc("/go/hello", handler)
 
-	port, ok := os.LookupEnv("PORT")
-	if !ok {
-		port = "9000"
-	}
+	port := os.Getenv("API_PORT")
 	log.Printf("starting golang helloworld on port %s...", port)
 	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%s", port), nil))
 }
