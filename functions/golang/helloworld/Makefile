@@ -1,5 +1,9 @@
+REGISTRY=localhost
+
 package:
-	docker build . -t faas/helloworld-go:latest
+	docker ps
+	docker build . -t $(REGISTRY):5000/faas/helloworld-go:latest
 
 deploy:
+	docker push $(REGISTRY):5000/faas/helloworld-go:latest
 	kubectl apply -f service.yaml
