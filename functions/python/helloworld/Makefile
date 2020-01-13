@@ -1,4 +1,4 @@
-REGISTRY=localhost
+REGISTRY:=$(shell minikube ip)
 
 pre-reqs:
 	python3 -m pip install pipenv

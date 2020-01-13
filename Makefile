@@ -12,7 +12,7 @@ cluster:
 	minikube addons enable registry
 	
 	# port forward from local to minikube with socat
-	docker rm -f $(SOCAT_BRIDGE) 2>/dev/null
+	docker rm -f $(SOCAT_BRIDGE) || true
 	docker run -d --name socat-bridge --rm --network=host alpine ash -c "apk add socat && socat TCP-LISTEN:5000,reuseaddr,fork TCP:$(REGISTRY):5000" 2>/dev/null
 
 deploy:

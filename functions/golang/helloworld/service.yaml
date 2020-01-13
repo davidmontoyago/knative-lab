@@ -7,7 +7,7 @@ spec:
   template:
     spec:
       containers:
-        - image: localhost:5000/faas/helloworld-go:latest
+        - image: 192.168.64.14:5000/faas/helloworld-go:latest
           imagePullPolicy: IfNotPresent
           env:
             - name: API_PORT

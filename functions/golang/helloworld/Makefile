@@ -1,4 +1,4 @@
-REGISTRY=localhost
+REGISTRY:="$(shell minikube ip)"
 
 package:
 	docker ps
@@ -7,3 +7,6 @@ package:
 deploy:
 	docker push $(REGISTRY):5000/faas/helloworld-go:latest
 	kubectl apply -f service.yaml
+
+destroy:
+	kubectl delete -f service.yaml
