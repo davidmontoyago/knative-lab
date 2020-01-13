@@ -8,7 +8,7 @@ pylint = "*"
 
 [packages]
 Flask = "==1.1.1"
-gunicorn = "==19"
+gunicorn = "==19.5.0"
 
 [requires]
 python_version = "3.7"
